@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Ágil CMED</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Consulta Ágil CMED</h1>
+        <p>Consulte o Preço Fábrica (PF) e Máximo ao Consumidor (PMC)</p>
+    </header>
+
+    <main>
+        <div class="controles-container">
+
+            <div class="input-grupo">
+                <label for="campoBusca">Medicamento:</label>
+                <input type="text" id="campoBusca" placeholder="Nome, substância ou laboratório...">
+            </div>
+
+            <div class="input-grupo">
+                <label for="filtroImposto">ICMS (Imposto):</label>
+                <select id="filtroImposto">
+                    <option value="18 %" selected>18% (Padrão)</option>
+                    <option value="17 %">17%</option>
+                    <option value="12 %">12%</option>
+                    <option value="20 %">20%</option>
+                    <option value="0%">0%</option>
+                    <option value="todos">Visualizar Todos</option>
+                </select>
+            </div>
+
+        </div>
+
+        <p id="mensagemCarregando">Carregando base de dados...</p>
+
+        <div id="listaResultados" class="results-container"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
